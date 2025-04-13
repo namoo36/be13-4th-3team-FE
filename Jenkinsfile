@@ -76,21 +76,21 @@ pipeline {
             }
         }
 
-        // stage('Trigger yygang-manifest') {
-        //     steps {
-        //         script {
-        //             def dockerImageVersion = "${env.BUILD_NUMBER}"
+        stage('Trigger yygang-app-manifest') {
+            steps {
+                script {
+                    def dockerImageVersion = "${env.BUILD_NUMBER}"
 
-        //             withEnv(["DOCKER_IMAGE_VERSION=${dockerImageVersion}"]) {
-        //                 build job: 'yygang-manifest',
-        //                 parameters: [
-        //                     string(name: 'DOCKER_IMAGE_VERSION', value: "${DOCKER_IMAGE_VERSION}")
-        //                 ],
-        //                 wait: true
-        //             }
-        //         }
-        //     }
-        // }
+                    withEnv(["DOCKER_IMAGE_VERSION=${dockerImageVersion}"]) {
+                        build job: 'yygang-app-manifest',
+                        parameters: [
+                            string(name: 'DOCKER_IMAGE_VERSION', value: "${DOCKER_IMAGE_VERSION}")
+                        ],
+                        wait: true
+                    }
+                }
+            }
+        }
     }
 
     post {
