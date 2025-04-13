@@ -42,7 +42,8 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                     sh 'npm install'
-                    sh 'npm run build' 
+                    sh 'chmod +x node_modules/.bin/vite'
+                    sh 'npm run build'
                 }
             }
         }
