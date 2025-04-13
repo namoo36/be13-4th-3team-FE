@@ -62,6 +62,7 @@ pipeline {
                             passwordVariable: 'DOCKER_PASSWORD'
                         )]) {
                             sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                            sh 'docker info' // 로그인 후 확인
                         }
 
                         withEnv(["DOCKER_IMAGE_VERSION=${dockerImageVersion}"]) {
