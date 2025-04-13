@@ -1,0 +1,1 @@
+import{_ as o,a as n,d as t,o as r}from"./index-BaYYEV3U.js";const s={};function a(c,e){return r(),n("div",null,e[0]||(e[0]=[t("h2",null,"404 Not Found",-1)]))}const l=o(s,[["render",a]]);export{l as default};

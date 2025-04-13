@@ -1,0 +1,1 @@
+import{_ as o,a as t,d as n,o as r}from"./index-BaYYEV3U.js";const a={};function l(s,e){return r(),t("div",null,e[0]||(e[0]=[n("main",null,[n("h2",null,"제품 정보 페이지")],-1)]))}const f=o(a,[["render",l]]);export{f as default};
