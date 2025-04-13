@@ -6,7 +6,7 @@ import axios from "axios";  // axios 라이브러리를 사용해 HTTP 통신 �
 //  - 브라우저 호환성, JSON 자동 변환 기능 등의 장점을 가지고 있다.
 const apiClient = axios.create({
     // 새로운 Axios 인스턴스 생성 -> 기본 URL + 만료 시간 설정 
-    baseURL: 'http://localhost:8080',
+    baseURL: 'http://localhost:8000',
     timeout: 2000   // 2초를 넘기면 타임아웃 발생 
 });
 
