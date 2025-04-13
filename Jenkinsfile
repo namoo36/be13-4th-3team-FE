@@ -42,7 +42,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                     sh 'npm install'
-                    sh 'npm run build'
+                    sh 'npx vite build'  // vite로 빌드 실행'
                 }
             }
         }
