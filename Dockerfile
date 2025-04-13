@@ -1,20 +1,5 @@
 # Step 1: Vue.js 프로젝트를 빌드하는 Node.js 이미지
-FROM node:18-alpine AS build
-
-# 작업 디렉토리 설정
-WORKDIR /app
-
-# 프론트엔드 소스 코드 복사
-COPY . .
-
-# 의존성 설치
-RUN npm install
-
-# Vue.js 빌드 (빌드 결과물이 /dist 폴더에 생성됩니다)
-RUN npm run build
-
-# Step 2: Nginx로 빌드된 결과물을 서빙
-FROM nginx:alpine
+FROM nginx:latest
 
 # Vue.js 빌드 결과물 복사
 COPY --from=build /app/dist /usr/share/nginx/html
